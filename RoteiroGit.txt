@@ -1,0 +1,89 @@
+O que é o git?
+git é um gerenciador de versões;
+trabalha com versões distribuidas;
+ o seu código está na sua máquina e só na sua máquina,
+se houver falha vc não compromete a atuação dos demais.
+Para contribuições com vários colaboredores online é preciso 
+criar um repositório remoto.
+Se tudo der errado vc pode apagar e clonar outra vez
+do repositório remoto.
+Cuidado que você não é o único a mexer no código, antes
+de dar push verificar o estado do repositório, e baixar
+as alterações
+
+o COMMIT
+ compromisso, é um hash gerado para o estado do repositório
+ 
+é um número hexadecimal que corresponde a saída de uma fun-
+ção hash
+	e61d3cacd48eeb1a044e8e919519e938d32cfcdd
+	
+- Instalar o Git com o bash junto;
+
+inciar credenciais no git local
+git config --global user.name "João Silva"
+git config --global user.email "exemplo@seuemail.com.br"
+
+- Criar uma conta no Github
+criar um repositório remoto.
+	repositório é a pasta principal de versionamento, o 
+git fica monitorando o estado dos arquivos e diretórios 
+que estão dentro do repositório para poder gerar novas
+versões (commits).
+
+- Criar uma pasta local e clonar o repositório remoto;
+
+***
+- Não é necessário um repositório remoto, ele pode ser
+em uma pasta local
+entrar na pasta 
+git init
+	observar a pasta .git, com isso vc consegue utilizar
+o versionamento de forma local. Está apenas na sua máquina.
+***
+
+- Criar vários arquivos de texto para poder fazer stage.
+
+git status
+	O comando status vai listar os arquivos e diretórios 
+que sofreram atualização desde o último commit.
+
+git log
+git log --oneline
+git log --oneline --graph
+
+- Adicionar um arquivo ao índice (tracking rastrear)
+	Isso serve para dizer ao git quais os arquivos estão
+aptos a serem commitados (em estado de pronto para gerar 
+uma versão), não é possível gerar um commit sem arquivos
+em stage.
+
+git add . //isso adicona todos os arquivos modificados ao
+
+git add <nomeDoArquivo>
+
+	para reverter o arquivo em stage 
+	git restore --staged <nomeDoArquivo>
+	
+- Gerar o primeiro commit 
+git commit -m "mensagem identificando o commit"
+
+
+
+git chechout -b <nomeBranch>
+criar novo branch
+
+
+
+
+
+Cenários a serem explorados
+
+- mexi em um arquivo ao mesmo tempo que outro colaborador
+e preciso mesclar ambos os branches (;
+- fiz alerações em vários arquivos mas não tenho certeza;
+sobre a integridade do que fiz (undo changes); 
+- stage só dos arquivos que eu já tenho certeza que estão
+corretos;
+- reverter o último commit;
+- reverter um commit específico (cherry picking);
