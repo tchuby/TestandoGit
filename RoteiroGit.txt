@@ -80,10 +80,16 @@ criar novo branch
 Cenários a serem explorados
 
 - mexi em um arquivo ao mesmo tempo que outro colaborador
-e preciso mesclar ambos os branches (;
+e preciso mesclar ambos os branches ;
+
 - fiz alerações em vários arquivos mas não tenho certeza;
 sobre a integridade do que fiz (undo changes); 
+
 - stage só dos arquivos que eu já tenho certeza que estão
 corretos;
+
 - reverter o último commit;
-- reverter um commit específico (cherry picking);
+git reset HEAD~1 ou HEAD~ OU HEAD^
+
+- reverter um commit específico;
+git revert <hashDoCommit>
